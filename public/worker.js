@@ -1,56 +1,3 @@
-// var CACHE_NAME = "pwa-task-manager";
-// // const dynamicCacheName = "site-dynamic-v1";
-// var urlsToCache = [
-//   "/",
-//   "/index.html",
-//   "/src/App.js",
-//   "/src/App.css",
-//   "/src/index.js",
-//   "/src/index.css",
-//   "/src/App.test.js",
-//   "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
-// ];
-
-// // Install a service worker
-// self.addEventListener("install", (event) => {
-//   // Perform install steps
-//   event.waitUntil(
-//     caches.open(CACHE_NAME).then(function (cache) {
-//       console.log("Opened cache");
-//       return cache.addAll(urlsToCache);
-//     })
-//   );
-// });
-
-// // Cache and return requests
-// self.addEventListener("fetch", (event) => {
-//     event.respondWith(
-//       caches.match(event.request).then(function (response) {
-//         // Cache hit - return response
-//         if (response) {
-//           return response;
-//         }
-//         return fetch(event.request);
-//       })
-//     );
-// });
-
-// // Update a service worker
-// self.addEventListener("activate", (event) => {
-//   var cacheWhitelist = ["pwa-task-manager"];
-//   event.waitUntil(
-//     caches.keys().then((cacheNames) => {
-//       return Promise.all(
-//         cacheNames.map((cacheName) => {
-//           if (cacheWhitelist.indexOf(cacheName) === -1) {
-//             return caches.delete(cacheName);
-//           }
-//         })
-//       );
-//     })
-//   );
-// });
-
 const staticCacheName = "site-static-v2";
 const dynamicCacheName = "site-dynamic-v2";
 const assets = [
@@ -66,17 +13,6 @@ const assets = [
   "/src/assets/woman.svg",
   "/src/assets/trashcan.svg",
 ];
-
-// cache size limit function
-// const limitCacheSize = (name, size) => {
-//   caches.open(name).then((cache) => {
-//     cache.keys().then((keys) => {
-//       if (keys.length > size) {
-//         cache.delete(keys[0]).then(limitCacheSize(name, size));
-//       }
-//     });
-//   });
-// };
 
 // install event
 self.addEventListener("install", (evt) => {

@@ -42,11 +42,12 @@ class Modal extends React.Component {
       }, 4000);
       return;
     }
-    firebase
-      .firestore()
-      .collection("users")
-      .doc(this.state.name)
-      .set(this.state);
+    const data = {
+      name: this.state.name,
+      age: this.state.age,
+      gender: this.state.gender,
+    };
+    firebase.firestore().collection("users").doc(this.state.name).set(data);
     this.props.handleClose();
   };
 
