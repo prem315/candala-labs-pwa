@@ -8,7 +8,7 @@ const Navbar = () => {
         CANDELA-LABS PWA
       </Link>
 
-      <div className="collapse navbar-collapse" id="navbarText">
+      <div className="" id="navbarText">
         <ul className="navbar-nav mr-auto">
           <Link to="/" className="nav-item" style={{ marginRight: "20px" }}>
             Firebase Users

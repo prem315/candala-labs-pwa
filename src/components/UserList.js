@@ -5,6 +5,7 @@ import Modal from "./Modal";
 import "../App.css";
 import plusCircle from "../assets/plus-circle.svg";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 class UserList extends React.Component {
   constructor(props) {
@@ -66,6 +67,7 @@ class UserList extends React.Component {
             Users will be directly stored into Firebase database and synced with
             the IndexedDb in the browser. User can access data offline.
           </div>
+
           <div className="row" style={{ color: "#fff" }}>
             <div className="col-md-12">
               <h1>Users</h1>

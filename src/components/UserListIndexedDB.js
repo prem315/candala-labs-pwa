@@ -1,6 +1,7 @@
 import React from "react";
 import { getUsers, addUser } from "../Indexdb/userDb";
 import User from "./User";
+import { Link } from "react-router-dom";
 
 // const UserListIndexedDb = () => {
 //   return <div>User List IndexDB</div>;
@@ -89,6 +90,7 @@ class UserListIndexedDb extends React.Component {
             Users will be directly stored into Users IndexedDb in the browser.
             User can access data offline.
           </div>
+
           <div className="row" style={{ color: "#fff" }}>
             <div className="col-md-12">
               <h1>Users</h1>
