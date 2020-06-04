@@ -61,11 +61,21 @@ class UserList extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
-        <div class="list-wrapper">
-          <ul class="list">
-            {this.state.users.map((user) => {
-              return <User user={user} />;
+        <div className="container" style={{ marginTop: "20px" }}>
+          <div className="alert alert-primary" role="alert">
+            Users will be directly stored into Firebase database and synced with
+            the IndexedDb in the browser. User can access data offline.
+          </div>
+          <div className="row" style={{ color: "#fff" }}>
+            <div className="col-md-12">
+              <h1>Users</h1>
+            </div>
+          </div>
+        </div>
+        <div className="list-wrapper">
+          <ul className="list">
+            {this.state.users.map((user, index) => {
+              return <User user={user} key={index} />;
             })}
           </ul>
         </div>

@@ -5,15 +5,15 @@ import trashcan from "../assets/trashcan.svg";
 
 const User = ({ user }) => {
   return (
-    <li class="list-item">
+    <li className="list-item">
       <div>
         {user.gender === "male" ? (
-          <img src={man} class="list-item-image" />
+          <img src={man} className="list-item-image" />
         ) : (
-          <img src={woman} class="list-item-image" />
+          <img src={woman} className="list-item-image" />
         )}
       </div>
-      <div class="list-item-content">
+      <div className="list-item-content">
         <h4>{user.name}</h4>
         <p>
           {user.gender} | {user.age}

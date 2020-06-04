@@ -74,7 +74,7 @@ class Modal extends React.Component {
     return (
       <div className={showHideClassName}>
         <section className="modal-main">
-          <div className="container">
+          <div className="container-box">
             <h1>Enter a new User</h1>
             {this.state.error === true ? (
               <div class="alert alert-danger" role="alert">
